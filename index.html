@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bellosom on SOL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico" />
+  </head>
+  <body>
+    <main>
+      <section class="section section1">
+        <div class="socials">
+          <a href="https://t.me/BellosomOnSol">
+            <img src="src/tg.svg" alt="Telegram" />
+          </a>
+          <a href="https://x.com/BellosomOnSol">
+            <img src="src/x.png" alt="X" />
+          </a>
+          <a href="https://example.com/link-to-dex">
+            <img src="src/dex.png" alt="Dex" />
+          </a>
+        </div>
+        <h1>Bellosom on SOL</h1>
+        <div class="logo">
+          <img src="src/bellosom.gif" alt="Logo" />
+        </div>
+        <h2>cute dancer</h2>
+      </section>
+      <section class="section section2">
+        <div class="content">
+          <img src="src/bellosom2.gif" alt="Bellosom 2" class="left-image" />
+          <div class="content-text">
+            <p>when the sun sets, I twirl into dance,</p>
+            <p>petals swirling in a graceful trance</p>
+            <p>with each step, a rhythm unfolds,</p>
+            <p>nature's melody, vibrant and bold</p>
+            <a href="https://example.com/link-to-dex">
+              <button class="buy-button">BUY $BELL</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section section3">
+        <img src="src/banner.png" alt="Banner" class="section3-image" />
+        <div class="content-text">Ca: placeholder</div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        const sparkle = document.createElement("div");
+        sparkle.classList.add("sparkle");
+        sparkle.style.left = `${e.pageX}px`;
+        sparkle.style.top = `${e.pageY}px`;
+        document.body.appendChild(sparkle);
+
+        sparkle.addEventListener("animationend", function () {
+          sparkle.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

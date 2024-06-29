@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("src/Pokemon.ttf") format("truetype");
+}
+
+body {
+  font-family: "Pokemon", Arial, sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.section {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("src/bg.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.69;
+  z-index: -1;
+}
+
+.section div {
+  margin: 10px 0;
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.section1 {
+  background-color: rgba(244, 217, 126, 0.8);
+}
+
+.section2 {
+  background-color: rgba(101, 150, 104, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+.section3 {
+  background-color: rgba(244, 217, 126, 0.8);
+  position: relative;
+  max-height: 50vh;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300%;
+  height: 150%;
+  background-image: url("src/dust.gif");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 2;
+}
+
+.logo img {
+  max-width: 100%;
+  height: 25vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.left-image {
+  max-width: 33%;
+  height: auto;
+  border: 1px solid black;
+  margin-left: 10%;
+  border-radius: 12px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content-text {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.socials img:hover {
+  opacity: 0.69;
+}
+
+.socials img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.socials img[src="src/x.png"] {
+  width: 55px;
+  height: 55px;
+}
+
+.socials img[src="src/tg.svg"] {
+  width: 50px;
+  height: 50px;
+}
+
+.socials img[src="src/dex.png"] {
+  width: 50px;
+  height: 50px;
+}
+
+.buy-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid black;
+  font-weight: bolder;
+}
+
+.buy-button:hover {
+  background-color: #388e3c;
+  color: darkgrey;
+  text-decoration: underline;
+}
+
+.section3-image {
+  width: 110%;
+  height: auto;
+  opacity: 0.69;
+  margin-bottom: -5%;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(246, 230, 230, 0.88);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  animation: sparkle 0.5s ease-out forwards;
+}
